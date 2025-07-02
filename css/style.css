@@ -311,7 +311,7 @@
 }
 
 .fruite .fruite-item {
-    height: 100%;
+    height: auto;
     transition: 0.5s;
 }
 .fruite .fruite-item:hover {
