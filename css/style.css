@@ -191,10 +191,10 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/hero-img.jpg);
-    background-position: center center;
+    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url(../img/hhh.png);
+    background-position: left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:contain;
 }
 
 .carousel-item {
@@ -232,10 +232,10 @@
 
 .page-header {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/cart-page-header-img.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/ayurvedic.png);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 
 @media (min-width: 992px) {
@@ -508,3 +508,223 @@
 }
 /*** Footer End ***/
 
+/* General Body & Typography */
+body {
+    font-family: 'Open Sans', sans-serif; /* Keep consistent with your Google Fonts */
+    color: #666; /* Adjust default text color if needed */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif; /* Headings font */
+    color: #333; /* Default heading color, adjust for specific sections */
+}
+
+/* Navbar Enhancements */
+.navbar-brand .ojasvi-brand-title {
+    font-size: 2.2rem; /* Adjusted for consistency, remove !important from HTML */
+}
+@media (max-width: 991.98px) {
+    .navbar-brand .ojasvi-brand-title {
+        font-size: 1.8rem; /* Smaller on tablets/mobiles */
+    }
+}
+
+/* Hero Section Enhancements */
+.hero-header h1.hero-title {
+    font-size: 3.5rem; /* Larger hero title */
+}
+
+@media (max-width: 1199.98px) { /* Large desktops */
+    .hero-header h1.hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 991.98px) { /* Tablets and smaller */
+    .hero-header h1.hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Mobile devices */
+    .hero-header h1.hero-title {
+        font-size: 2rem;
+    }
+}
+
+/* Hero Carousel Image Sizing */
+.hero-carousel .carousel-inner {
+    max-width: 600px; /* Kept from your inline style, but now in CSS */
+    max-height: 400px; /* Kept from your inline style, but now in CSS */
+    margin: auto; /* To center the carousel */
+}
+
+.hero-carousel .carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Changed from fill to cover for better image scaling */
+    border-radius: 0.25rem; /* Matches Bootstrap's default rounded */
+}
+
+/* Shop Now Button Hover Effect */
+.btn-primary.border-2.border-secondary {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary.border-2.border-secondary:hover {
+    background-color: #e6a71c; /* Slightly darker primary color on hover */
+    border-color: #e6a71c; /* Match border color on hover */
+    color: #fff; /* Ensure text color remains white or changes appropriately */
+}
+
+/* About Section Image */
+.about-section-image {
+    width: 100%; /* Make responsive */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures image fills the space without distortion */
+}
+
+/* Ojasvi Philosophy List Spacing */
+.ojasvi-philosophy {
+    padding: 20px; /* Moving inline style to CSS */
+}
+
+.ojasvi-philosophy .philosophy-list {
+    list-style-type: disc; /* Ensure disc bullets */
+    padding-left: 20px; /* Indent the list */
+}
+
+.ojasvi-philosophy .philosophy-list li {
+    margin-bottom: 15px; /* Adds space between list items */
+}
+
+/* Adjust paragraph spacing in the "From Garden To Glow" section */
+/* This makes sure the paragraphs are naturally spaced without <br /> */
+.row.g-4.mb-5 .col-lg-9 p {
+    margin-bottom: 1rem; /* Default Bootstrap paragraph margin */
+}
+.row.g-4.mb-5 .col-lg-9 p:last-child {
+    margin-bottom: 0; /* Remove margin from the last paragraph if not needed */
+}
+
+/* Footer Social Icons - Add ARIA labels for accessibility */
+.footer .btn-outline-secondary {
+    /* You already have styles for these, ensure they have good hover states too */
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .btn-outline-secondary:hover {
+    background-color: #ffb524; /* Your primary color */
+    border-color: #ffb524;
+    color: #fff !important; /* Ensure the icon color changes */
+}
+
+/* --- New/Updated Styles for shop-detail.html --- */
+
+/* About Page Content Images (e.g., product image 4.jpeg, founder.jpg) */
+.about-content-image {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Prevents distortion, crops if necessary */
+    border-radius: 0.25rem; /* Matches Bootstrap's default rounded */
+}
+
+/* About Page Paragraph Text Alignment */
+.about-text {
+    text-align: justify; /* Apply justify to relevant paragraphs */
+    margin-bottom: 1rem; /* Ensure standard Bootstrap paragraph spacing */
+}
+/* Remove extra margin for paragraphs directly following another or specific breaks */
+.about-text + .about-text {
+    margin-top: 1rem; /* Ensure proper spacing between paragraphs */
+}
+
+
+/* Ingredients Section Styling (moved from inline <style> block) */
+.ingredients-section {
+    background-color: #fffaf6;
+    border-radius: 15px;
+    padding: 2rem;
+    font-family: "Segoe UI", sans-serif; /* You can adjust this to your main body font */
+    color: #3b3b3b;
+    margin-top: 5rem; /* Add some top margin to separate from previous section */
+}
+
+.ingredients-section h2 {
+    font-weight: bold;
+    color: #9c1c1c; /* A deep red for headings */
+}
+
+.yajurveda-quote h5 {
+    font-style: italic;
+    color: #5a3e2b; /* A darker brown */
+    margin-bottom: 0.5rem;
+}
+
+.yajurveda-quote p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #7a5b47; /* A lighter brown */
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto; /* Center and add more space below quote */
+}
+
+.ingredient-block {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background-color: #fff3e6; /* Lighter background for blocks */
+    border-left: 5px solid #cf1f1f; /* Red accent border */
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(180, 128, 90, 0.1); /* Subtle shadow */
+}
+
+.ingredient-block h4 {
+    color: #842020; /* Darker red for block headings */
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.ingredient-block small {
+    font-weight: normal;
+    color: #6a6a6a;
+    display: block; /* Ensure small tag takes its own line */
+    margin-top: 0.25rem; /* Small space below main heading text */
+}
+
+.ingredient-block ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.ingredient-block ul li {
+    padding: 6px 0;
+    font-size: 1rem;
+    border-bottom: 1px dashed #e0cfc1; /* Dashed separator */
+    position: relative; /* For custom bullet point */
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+.ingredient-block ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #cf1f1f; /* Color of the bullet */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
+
+.ingredient-block ul li:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+/* Ensure the navbar brand title's size is consistent, taken from the homepage suggestions */
+.navbar-brand .ojasvi-brand-title {
+    font-size: 2.2rem; /* Adjusted for consistency, remove !important from HTML */
+}
+@media (max-width: 991.98px) {
+    .navbar-brand .ojasvi-brand-title {
+        font-size: 1.8rem; /* Smaller on tablets/mobiles */
+    }
+}
